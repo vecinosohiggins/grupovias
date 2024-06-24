@@ -1,0 +1,19 @@
+---
+// src/pages/video.astro
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+  <div class="max-w-6xl mx-auto py-8">
+    <h1 class="text-3xl font-bold">Video Page</h1>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe
+        class="rounded-lg"
+        src=`https://youtube.com/shorts/IhZJs8qF3QM?si=kB3fI2XgGZv6LeUP`}
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</Layout>

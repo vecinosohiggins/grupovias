@@ -1,0 +1,24 @@
+---
+import YouTubeEmbed from "./YouTubeEmbed.astro";
+// src/components/ImageGallery.astro
+const videos = [
+  { src: 'IhZJs8qF3QM', alt: 'Video 1' },
+  { src: 'lUUw8zEAGxQ', alt: 'Video 2' },
+  { src: 'UtyIpCqYxb0', alt: 'Video 3' },
+  { src: 'yovsvci-edE', alt: 'Video 4' },  
+];
+---
+
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {videos.map((url) => (
+      <YouTubeEmbed url={url.src} />
+    ))}
+  </div>
+</div>
+<style>
+/* Custom styles for the image gallery */
+.container {
+  max-width: 1200px;
+}
+</style>

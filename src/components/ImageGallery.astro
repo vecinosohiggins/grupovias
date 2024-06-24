@@ -1,0 +1,25 @@
+---
+// src/components/ImageGallery.astro
+const images = [
+  { src: '/img/viga-humeda.jpeg', alt: 'Image 1' },
+  { src: '/img/techo-tragaluz-humedo.jpeg', alt: 'Image 2' },
+  { src: '/img/malas-terminaciones-puerta-entrada.jpeg', alt: 'Image 3' },
+];
+---
+
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {images.map((image) => (
+      <div class="relative overflow-hidden rounded-lg">
+        <img src={image.src} alt={image.alt} class="object-cover w-full h-full" />
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+/* Custom styles for the image gallery */
+.container {
+  max-width: 1200px;
+}
+</style>
