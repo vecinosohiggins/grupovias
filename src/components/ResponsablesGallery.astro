@@ -1,9 +1,9 @@
 ---
 // src/components/ResponsablesGallery.astro
 const images = [
-  { src: '/img/responsables/gerente-general.jpg', alt: 'Image 1' },
-  { src: '/img/responsables/constructor-civil.jpg', alt: 'Image 1' },
 ];
+
+const general = '/img/responsables/equipo.jpg';
 ---
 
 <div class="container mx-auto px-4 py-8">
@@ -13,6 +13,9 @@ const images = [
         <img src={image.src} alt={image.alt} class="object-cover w-full h-full" />
       </div>
     ))}
+  </div>
+  <div class="relative overflow-hidden rounded-lg">
+    <img src={general}  class="object-cover w-full h-full" />
   </div>
 </div>
 
